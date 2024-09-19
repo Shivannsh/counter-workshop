@@ -40,6 +40,7 @@ async function main() {
     constructorCalldata: constructor,
     salt: stark.randomAddress(),
   });
+  console.log("Deployment response:", deployResponse);
 
   // Connect the new contract instance :
   const myTestContract = new Contract(

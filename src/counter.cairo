@@ -67,7 +67,7 @@ mod counter_contract {
             let incremented_counter = self.counter.read() + 1;
             self.counter.write(incremented_counter);
 
-            self.emit(Event::CounterIncreased(CounterIncrease { counter: self.counter.read() }));
+            self.emit(Event::CounterIncreased(CounterIncrease { counter: incremented_counter }));
         }
     }
 }
